@@ -1,0 +1,8 @@
+*.py
+*.csv
+*.png
+commands.txt
+mlruns/
+mlartifacts/
+dump/
+problem_statement.txt
