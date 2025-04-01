@@ -1,0 +1,7 @@
+[run]
+source = 
+    score
+    test
+omit = 
+    app.py
+    */site-packages/* 
