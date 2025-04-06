@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.11, pytest-8.3.5, pluggy-1.5.0 -- /home/dhruv/miniconda3/envs/llm/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/dhruv/Downloads/AppliedMachineLearning/Assignment_4
+plugins: cov-6.1.0, anyio-4.3.0, hydra-core-1.3.2
+collecting ... collected 10 items
+
+test.py::TestScore::test_smoke PASSED                                    [ 10%]
+test.py::TestScore::test_format PASSED                                   [ 20%]
+test.py::TestScore::test_prediction_values PASSED                        [ 30%]
+test.py::TestScore::test_propensity_range PASSED                         [ 40%]
+test.py::TestScore::test_threshold_zero PASSED                           [ 50%]
+test.py::TestScore::test_threshold_one PASSED                            [ 60%]
+test.py::TestScore::test_obvious_spam PASSED                             [ 70%]
+test.py::TestScore::test_obvious_ham PASSED                              [ 80%]
+test.py::TestDocker::test_docker PASSED                                  [ 90%]
+test.py::TestFlask::test_flask_endpoint PASSED                           [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.11.11-final-0 _______________
+
+Name       Stmts   Miss  Cover   Missing
+----------------------------------------
+score.py       9      0   100%
+test.py       85      0   100%
+----------------------------------------
+TOTAL         94      0   100%
+============================= 10 passed in 14.25s ==============================

@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Get current branch
+branch="$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')"
+
+# Only run tests when committing to main branch
+if [ "$branch" = "main" ]; then
+  echo "Running tests before committing to main branch..."
+  
+  # Save current directory
+  current_dir=$(pwd)
+  
+  # Change to Assignment_4 directory
+  cd Assignment_4
+  
+  # Run test.py using pytest
+  python -m pytest test.py
+  
+  # Get the exit code of the tests
+  test_status=$?
+  
+  # Return to original directory
+  cd "$current_dir"
+  
+  # If tests failed, prevent commit
+  if [ $test_status -ne 0 ]; then
+    echo "Tests failed. Commit aborted."
+    exit 1
+  fi
+  
+  echo "Tests passed. Proceeding with commit."
+fi
+
+exit 0 
